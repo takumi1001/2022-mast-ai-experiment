@@ -6,3 +6,8 @@
 
 男性の顔写真を入力として、その顔の「印象」を複数出力するシステム。
 
+# 利用しているデータセット
+
+IMDB-WIKI - 500k+ face images with age and gender labels - https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
+
+利用は学術研究目的に限られる。
