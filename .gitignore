@@ -1,6 +1,8 @@
 # dataset
 /imdb-wiki/
 
+# the files including my student id
+preprocessing/img-list.csv
 
 # Python gitignore---- 
 # Byte-compiled / optimized / DLL files
