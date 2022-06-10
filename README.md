@@ -11,7 +11,3 @@
 IMDB-WIKI - 500k+ face images with age and gender labels - https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
 
 利用は学術研究目的に限られる。
-
-# このブランチは？
-
- - facenetの利用
