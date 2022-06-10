@@ -14,5 +14,4 @@ IMDB-WIKI - 500k+ face images with age and gender labels - https://data.vision.e
 
 # このブランチは？
 
- - 二値分類モデルで，転移学習などを評価する．
- - 二値分類モデルを作成し，並列してマルチラベル問題を行う．
+ - facenetの利用
