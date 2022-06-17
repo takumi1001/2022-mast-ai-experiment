@@ -6,8 +6,13 @@
 
 男性の顔写真を入力として、その顔の「印象」を複数出力するシステム。
 
+詳細は発表資料をご覧ください。
+
 # 利用しているデータセット
 
 IMDB-WIKI - 500k+ face images with age and gender labels - https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
 
 利用は学術研究目的に限られる。
+
+# 発表資料
+- [中間発表スライド](https://github.com/takumi1001/2022-mast-ai-experiment/releases/download/%E4%B8%AD%E9%96%93%E7%99%BA%E8%A1%A8/slides.pdf)
