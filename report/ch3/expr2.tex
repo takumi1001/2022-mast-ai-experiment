@@ -122,4 +122,73 @@ LOOCV法は計算コストは高くなるものの，
 
 他はすべて実験1と同じとした．
 \section{機械学習の結果}
+両モデルにおいて，機械学習を行った結果を，
+図\ref{fig:ch3:result}に示す．
+
+\begin{figure}[p]
+  \centering
+  \subfloat[二値分類モデルの結果]
+  {\includegraphics[width=12cm]{ch3/binary.png}
+  \label{fig:ch3:binary}}
+  \\
+  \subfloat[マルチラベルモデルの結果]
+  {\includegraphics[width=12cm]{ch3/multi.png}
+  \label{fig:ch3:multi}} 
+  \caption{LOOCV法を実施した結果．\\
+各ラベルにおけるF1-score (棒グラフ)と
+  そのmacro-F1ならびにHamming Loss (グラフタイトル)．
+ }
+  \label{fig:ch3:result}
+\end{figure}
+
+これを見ると，実験1の結果である図\ref{fig:ch2:result}
+と同じように，multi-F1のスコアから，学習がうまくいっていないことがわかる．
+また，特にマルチラベルモデルで顕著であるが，
+実験1の場合より全体的に精度が低下している．
+
+\subsection{追加実験}
+実験2の目的は，実験1の学習がうまくいかなかった理由を
+データ数の少なさに求め，追加のデータを利用して学習を行うことであった．
+しかし，図\ref{fig:ch3:result}のように，学習データを増やした
+実験2でも学習はうまくいかなかった．
+
+つまり，実験1の学習結果は学習データ不足が原因ではない可能性がある．
+そこで，これをしっかりと検証するため追加実験を行った．
+
+追加実験では，実験2のデータのうち半分を無作為に除外し，
+半分のデータを用いて実験2を再度行った．
+
+これにより，追加実験の結果が実験2の結果より精度が悪ければ，
+データを増やすことで精度が向上できる，すなわち，
+実験1や実験2がうまくいかないのはデータ不足であるといえる．
+
+データ数を半分(170件)とした追加実験の結果を，
+図\ref{fig:ch3:result_less}に示す．
+
+\begin{figure}[p]
+  \centering
+  \subfloat[二値分類モデルの結果]
+  {\includegraphics[width=12cm]{ch3/less_binary.png}
+  \label{fig:ch3:less_binary}}
+  \\
+  \subfloat[マルチラベルモデルの結果]
+  {\includegraphics[width=12cm]{ch3/less_multi.png}
+  \label{fig:ch3:less_multi}} 
+  \caption{データ数を半分にしてLOOCV法を実施した結果．\\
+各ラベルにおけるF1-score (棒グラフ)と
+  そのmacro-F1ならびにHamming Loss (グラフタイトル)．
+ }
+  \label{fig:ch3:result_less}
+\end{figure}
+
+これを見ると，実験2の結果である図\ref{fig:ch3:result}と
+比較して，精度は大きく変化しないことがわかる．
+明らかに学習がうまくいっていないマルチラベルモデルを
+考えず，二値分類モデルのみに着眼しても，
+macro-F1はデータ数が多い図\ref{fig:ch3:binary}のが高いが，
+逆にHamming Lossは図\ref{fig:ch3:less_binary}のが低く，
+また両者の差はそれほど大きくない．
+
+以上のことから，学習データの量は
+学習がうまくいかない理由とは関係がなさそうである．
 

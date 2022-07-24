@@ -383,21 +383,21 @@ F1-scoreは優れた評価指標であるが，不均衡なデータに対して
 両モデルにおいて，機械学習を行った結果を，
 図\ref{fig:ch2:result}に示す．
 
-\begin{figure*}[!t]
+\begin{figure}[p]
   \centering
   \subfloat[二値分類モデルの結果]
-  {\includegraphics[width=10cm]{ch2/binary.png}
+  {\includegraphics[width=12cm]{ch2/binary.png}
   \label{fig:ch2:binary}}
   \\
   \subfloat[マルチラベルモデルの結果]
-  {\includegraphics[width=10cm]{ch2/multi.png}
+  {\includegraphics[width=12cm]{ch2/multi.png}
   \label{fig:ch2:multi}}
   \caption{ k=3でk分割交差検定法を実施した結果．\\
     各ラベルにおけるF1-score (棒グラフ)と
   そのmacro-F1ならびにHamming Loss (グラフタイトル)．
  }
   \label{fig:ch2:result}
-\end{figure*}
+\end{figure}
 
 これを見ると，まず，両モデルでmacro-F1に大きな差はなく，
 その値が0.3程度であることがわかる．F1-scoreは0.8程度で
